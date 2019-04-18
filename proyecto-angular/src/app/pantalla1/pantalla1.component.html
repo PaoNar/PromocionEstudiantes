@@ -1,0 +1,46 @@
+<div align=right >
+<mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="DESARROLLO DE SOFTWARE">DESARROLLO DE SOFTWARE</mat-option>
+    <mat-option value="DISEÑO DE MODAS">DISEÑO DE MODAS</mat-option>
+    <mat-option value="ARTE CULINARIO">ARTE CULINARIO</mat-option>
+    <mat-option value="ANALISIS DE SISTEMAS">ANALISIS DE SISTEMAS</mat-option>
+    <mat-option value="ROBOTICA">ROBOTICA</mat-option>
+    <mat-option value="TURISMO">TURISMO</mat-option>
+  </mat-select>
+</mat-form-field>
+<p>Carrera: {{selected}}</p>
+</div>
+
+<div class="example-container mat-elevation-z8"  align= left>
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Nivel Column -->
+      <ng-container matColumnDef="Nivel">
+        <th mat-header-cell *matHeaderCellDef> Nivel </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nivel}} </td>
+      </ng-container>
+  
+      <!-- Nombres Column -->
+      <ng-container matColumnDef="Nombres">
+        <th mat-header-cell *matHeaderCellDef> Nombres </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nombres}} </td>
+      </ng-container>
+  
+      <!-- Aprobados Column -->
+      <ng-container matColumnDef="Aprobados">
+        <th mat-header-cell *matHeaderCellDef> Aprobados </th>
+        <td mat-cell *matCellDef="let element"> {{element.Aprobados}} </td>
+      </ng-container>
+  
+      <!-- Reprobados Column -->
+      <ng-container matColumnDef="Reprobados">
+        <th mat-header-cell *matHeaderCellDef> Reprobados </th>
+        <td mat-cell *matCellDef="let element"> {{element.Reprobados}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

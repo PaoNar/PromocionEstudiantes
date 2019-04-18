@@ -1,0 +1,19 @@
+.mat-form-field{
+    padding: 3% 5% 0 0;
+}
+
+p{
+    padding: 1% 5% 0 0;   
+}
+
+.example-container {
+    height: 400px;
+    overflow: auto;
+    padding: 0 45% 0 0;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+
